@@ -6,5 +6,4 @@ Custom formulas for Google Sheets
 - Frequency Table: frequencies()
 - Find and Select: findAndSelect()
 - Get URL of a link: url()
-  - [https://www.oksheets.com/extract-hyperlink-url/](Implementation by Oluwaseun Olatoye)
-
+    - [Implementation by Oluwaseun Olatoye](https://www.oksheets.com/extract-hyperlink-url/)
