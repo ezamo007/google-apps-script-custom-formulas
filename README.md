@@ -1,7 +1,5 @@
-# google-apps-script
-
-Custom formulas for Google Sheets
-
+#Custom formulas for Google Sheets
+## Written in Google App Script
 - Venn Diagram: venn()
 - Frequency Table: frequencies()
 - Find and Select: findAndSelect()
