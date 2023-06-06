@@ -22,6 +22,7 @@ function findAndSelect() {
     SpreadsheetApp.setActiveRangeList(sheet.getRangeList(matchingCells));
 }
 
+
 // Select a range, then click "Color Rows" from the menu.
 // It will color the rows in a banded mannner, but with user-defined columns that must be different
 // to alternate colors.
@@ -52,22 +53,19 @@ function colorRows() {
       // Check if the specified columns have identical values
       var identical = true;
       for (var j = 0; j < columnsToMatch.length; j++) {
-        if (row[columnsToMatch[j] - 1] != previousRow[columnsToMatch[j] - 1]) {
+        if (row[columnsToMatch[j] - 1].toString() != previousRow[columnsToMatch[j] - 1].toString()) {
           identical = false;
           break;
         }
       }
-  
-      if (identical) {
-        for (var col = 1; col <= selectedRange.getNumColumns(); col++) {
-            selectedRange.getCell(i+1, col).setBackground(currentColor);
-          }
-      } else {
+
+      if(!identical){
         currentColor = (currentColor === '#CCC') ? '#EEE' : '#CCC';
-        for (var col = 1; col <= selectedRange.getNumColumns(); col++) {
-            selectedRange.getCell(i+1, col).setBackground(currentColor);
-          }      
-        }
+      }
+      for (var col = 1; col <= selectedRange.getNumColumns(); col++) {
+          selectedRange.getCell(i+1, col).setBackground(currentColor);
+      }      
+        
     }
   }
 
